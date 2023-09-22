@@ -1,5 +1,5 @@
 const diagnostics = require("express").Router();
-const { v4: uuidv4 } = require("uuid");
+const { v4: uuid4 } = require("uuid");
 const { readAndAppend, readFromFile } = require("../helpers/fsUtils");
 const diagnisticsData = require("../db/diagnostics.json");
 
@@ -11,7 +11,13 @@ diagnostics.get("/", (req, res) => {
 
 // POST Route for a error logging
 diagnostics.post("/", (req, res) => {
-  // TODO: Logic for appending data to the db/diagnostics.json file
+  const errors = req.body;
+  const newDiagnostic = {
+    time: Date.now(),
+    error_id: uuid4(),
+    errors,
+  };
+  res.json(newDiagnostic);
 });
 
 module.exports = diagnostics;
