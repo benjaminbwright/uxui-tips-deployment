@@ -61,5 +61,23 @@
             "topic": "Aliens is not a valid topic",
             "username": ""
         }
+    },
+    {
+        "time": 1695391822152,
+        "error_id": "502c2bf2-4f2c-4687-8891-3cffb8feacc2",
+        "errors": {
+            "username": "Invalid username!",
+            "tip": "Tip must be at least 15 characters",
+            "topic": ""
+        }
+    },
+    {
+        "time": 1695392015539,
+        "error_id": "a64dbf72-0846-4ef4-b475-c6fc7543723c",
+        "errors": {
+            "username": "Invalid username!",
+            "tip": "Tip must be at least 15 characters",
+            "topic": ""
+        }
     }
 ]
